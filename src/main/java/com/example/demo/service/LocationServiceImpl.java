@@ -3,5 +3,8 @@ package com.example.demo.service;
 public class LocationServiceImpl implements LocationService {
     @Autowired
     LocationRepository Locationrepo;
-    @ov
+    @Override
+    public LocationEntity createlocation(LocationEntity le ){
+        return Locationrepo.save(le)
+    }
 }
