@@ -3,10 +3,13 @@
 public class LocationController {
     @Autowired
     LocationService locationservice;
-    @PostMapping("/addstudent")
+    @PostMapping("/addlocation")
     public LocationEntity add(@RequestBody LocationEntity le){
         return locationservice.createlocation(le);
     }
 
-    @GetMapping("/")
+    @GetMapping("/showlocation")
+    public List<LocationEntity> show(){
+        return locationservice.getalllocation();
+    }
 }
