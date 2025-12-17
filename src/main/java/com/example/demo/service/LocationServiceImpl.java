@@ -5,9 +5,10 @@ public class LocationServiceImpl implements LocationService {
     LocationRepository Locationrepo;
     @Override
     public LocationEntity createlocation(LocationEntity le ){
-        return Locationrepo.save(le)
+        return Locationrepo.save(le);
+    public List<LocationEntity> getall(){
+        return Locationrepo.findAll();
     }
-    public LocationEntity getalllocation(LocationEntity le ){
-        return Locationrepo.
     }
+    
 }
