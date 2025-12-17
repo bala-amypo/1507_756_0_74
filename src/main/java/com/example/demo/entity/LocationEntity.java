@@ -55,5 +55,4 @@ public class LocationEntity {
     this.latitude = latitude;
     this.longitude = longitude;
     }
-
 }
