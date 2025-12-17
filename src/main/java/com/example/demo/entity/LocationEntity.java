@@ -3,4 +3,22 @@ package com.example.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id
+import jakarta.persistence.Id;
+
+@Entity
+public class LocationEntity {
+    @Id
+    @GeneratedValue(Stratergy=GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private Double latitude;
+    private Double longitude;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id
+    }
+}
